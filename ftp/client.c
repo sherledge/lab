@@ -34,7 +34,7 @@ int main() {
     printf("[+]Server socket created successfully.\n");
 
     server_addr.sin_family = AF_INET;
-    server_addr.sin_port = htons(port);  // Use htons() to convert port to network byte order
+    server_addr.sin_port = htons(port);  
     server_addr.sin_addr.s_addr = inet_addr(ip);
 
     if (connect(sockfd, (struct sockaddr *)&server_addr, sizeof(server_addr)) == -1) {
@@ -43,7 +43,7 @@ int main() {
     }
     printf("[+]Connected to Server.\n");
 
-    fp = fopen(filename, "rb");  // Open the file in binary mode for cross-platform compatibility
+    fp = fopen(filename, "rb");  
     if (fp == NULL) {
         perror("[-]Error in reading file.");
         exit(1);

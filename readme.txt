@@ -1,1 +1,1 @@
-gcc client.c -o client ./server /a.out
+gcc client.c -o client ./server ./a.out
